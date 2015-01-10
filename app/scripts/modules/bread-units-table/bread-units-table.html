@@ -1,0 +1,59 @@
+<!-- <div class="container">
+    <div class="row">
+        <div class="col-md-2"></div>
+        
+        <div class="col-md-8">
+            <form>
+                <div class="form-group">
+                    <label for="inputEmail">Email</label>
+                    <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword">Password</label>
+                    <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox"> Remember me</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div> -->
+
+<div class="container">
+    <h3>{{vm.title}}</h3>
+    <a href="#/dashboard">Home</a> | 
+    <a href="#/bread-units-table">Bread Units Table</a>
+    <hr/>
+    
+    <div class="row">
+        <input ng-model="vm.search" type="search" class="form-control" placeholder="Search">
+    </div>
+    <div class="row">
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>PRODUCT</th>
+                    <th>measure</th>
+                    <th>weight,g</th>
+                    <th>kcal</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="row in vm.data | filter:vm.search" ng-show="vm.isReady">
+                    <td>{{row[0]}}</td>
+                    <td>{{row[1]}}</td>
+                    <td>{{row[2]}}</td>
+                    <td>{{row[3]}}</td>
+                </tr>
+                <tr ng-show="!vm.isReady">
+                    <td colspan="4" class="text-center">
+                        <strong>Loading...</strong>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

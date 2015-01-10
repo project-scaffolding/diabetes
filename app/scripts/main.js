@@ -1,20 +1,22 @@
 'use strict';
 
 require.config({
-	deps: ['notes/app'],
+    baseUrl: 'scripts/',
     paths: {
-        jquery: '../bower_components/jquery/jquery',
-        underscore: '../bower_components/lodash/dist/lodash',
-        backbone: '../bower_components/backbone/backbone',
-        validation: '../bower_components/backbone.validation/dist/backbone-validation-amd'
+        domReady: '../bower_components/requirejs-domready/domReady',
+        angular: '../bower_components/angular/angular',
+        ngRoute: '../bower_components/angular-route/angular-route',
+        ngResource: '../bower_components/angular-resource/angular-resource',
+        ngMock: '../bower_components/angular-mocks/angular-mocks'
     },
     shim: {
-        'underscore': {
-            exports: '_'
+        angular: {
+            exports: 'angular'
         },
-        'backbone': {
-            deps: ['underscore', 'jquery'],
-            exports: 'Backbone'
-        }
-    }
+        ngRoute: ['angular'],
+        ngResource: ['angular'],
+        ngMock: ['angular']
+    },
+    priority: ['angular'],
+    deps: ['./bootstrap']
 });

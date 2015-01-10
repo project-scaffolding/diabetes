@@ -2,18 +2,12 @@
 'use strict';
 require.config({
     paths: {
-        jquery: '../bower_components/jquery/jquery',
-        underscore: '../bower_components/lodash/dist/lodash',
-        backbone: '../bower_components/backbone/backbone',
-        validation: '../bower_components/backbone.validation/dist/backbone-validation-amd'
+        domReady: '../bower_components/requirejs-domready/domReady',
+        angular: '../bower_components/angular/angular'
     },
     shim: {
-        'underscore': {
-            exports: '_'
-        },
-        'backbone': {
-            deps: ['underscore', 'jquery'],
-            exports: 'Backbone'
+        'angular': {
+            exports: 'angular'
         }
     }
 });
