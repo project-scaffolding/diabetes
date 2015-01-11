@@ -2,7 +2,7 @@ define([
     'angular',
     'ngResource',
     'ngMock'
-], function (angular) {
+], function(angular) {
     'use strict';
 
     return angular.module('dao', [

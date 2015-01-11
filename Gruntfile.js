@@ -30,7 +30,7 @@ module.exports = function (grunt) {
         watch: {
             js: {
                 files: ['<%= yeoman.app %>/scripts/{,*/}*.js'],
-                tasks: ['jshint'],
+                tasks: ['jshint', 'jscs'],
                 options: {
                     livereload: true
                 }
@@ -128,12 +128,20 @@ module.exports = function (grunt) {
             },
             all: [
                 'Gruntfile.js',
-                '<%= yeoman.app %>/scripts/{,*/}*.js',
+                '<%= yeoman.app %>/scripts/**/*.js',
                 '!<%= yeoman.app %>/scripts/vendor/*',
-                'test/spec/{,*/}*.js'
+                'test/spec/**/*.js'
             ]
         },
 
+        jscs: {
+            src: '<%= yeoman.app %>/scripts/**/*.js',
+            options: {
+                config: '.jscsrc',
+                // requireCurlyBraces: [ "if" ],
+                reporter: require('jscs-stylish').path
+            }
+        },
 
         // Mocha testing framework configuration options
         mocha: {
@@ -149,7 +157,7 @@ module.exports = function (grunt) {
             test: {
                 src: ['test/index.html'],
                 options : {
-                    threshold : 50
+                    threshold : 90
                 }
             }
         },
@@ -461,6 +469,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('default', [
         'newer:jshint',
+        'newer:jscs',
         'bower-install',
         'test',
         'build'

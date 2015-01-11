@@ -1,9 +1,10 @@
-define(['modules/bread-units-table/bread-units-table-module'], function (breadUnitsTable) {
+define(['modules/bread-units-table/bread-units-table-module'], function(breadUnitsTable) {
     'use strict';
 
-    return breadUnitsTable.controller('BreadUnitsTable', BreadUnitsTable);
+    breadUnitsTable.controller('BreadUnitsTable', BreadUnitsTable);
 
     BreadUnitsTable.$inject = ['breadUnitsService'];
+
     function BreadUnitsTable(breadUnitsService) {
         var vm = this;
         vm.isReady = false;

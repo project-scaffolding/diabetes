@@ -8,7 +8,7 @@ define([
     'domain/index',
     'modules/dashboard/index',
     'modules/bread-units-table/index'
-], function (angular) {
+], function(angular) {
     'use strict';
 
     return angular.module('diabetes', [

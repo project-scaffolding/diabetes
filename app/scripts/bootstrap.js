@@ -1,6 +1,3 @@
-/**
- * bootstraps angular onto the window.document node
- */
 require([
     'require',
     'angular',
@@ -8,7 +5,10 @@ require([
 ], function(require, angular, app) {
     'use strict';
 
-    require(['domReady!'], function (document) {
+    /**
+     * Bootstraps angular onto the window.document node
+     */
+    require(['domReady!'], function(document) {
         angular.bootstrap(document, [app.name]);
     });
 });
