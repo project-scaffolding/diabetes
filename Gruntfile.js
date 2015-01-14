@@ -157,7 +157,7 @@ module.exports = function (grunt) {
             test: {
                 src: ['test/index.html'],
                 options : {
-                    threshold : 90
+                    threshold : 85
                 }
             }
         },

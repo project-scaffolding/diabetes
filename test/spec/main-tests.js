@@ -31,9 +31,7 @@ require.config({
 
 require([
     'chai',
-    'angular',
-    'ngRoute',
-    'ngResource'
+    'angular'
 ], function (chai) {
     chai.should();
     window.expect = chai.expect;

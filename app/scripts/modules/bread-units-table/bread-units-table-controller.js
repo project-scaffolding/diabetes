@@ -7,6 +7,7 @@ define(['modules/bread-units-table/bread-units-table-module'], function(breadUni
 
     function BreadUnitsTable(breadUnitsService) {
         var vm = this;
+        vm.data = [];
         vm.isReady = false;
         vm.title = 'Bread Units Table';
 

@@ -58,17 +58,17 @@
 // }).call(this);
 
 
-define(['angular'], function (angular) {
-    'use strict';
+// define(['angular'], function (angular) {
+//     'use strict';
 
-    describe("Diabetes Module:", function() {
-        var module;
-        beforeEach(function() {
-            module = angular.module("diabetes");
-        });
+//     describe("Diabetes Module:", function() {
+//         var module;
+//         beforeEach(function() {
+//             module = angular.module("diabetes");
+//         });
 
-        it("should be registered", function() {
-            expect(module).not.to.equal(null);
-        });
-    });
-});
+//         it("should be registered", function() {
+//             expect(module).not.to.equal(null);
+//         });
+//     });
+// });
