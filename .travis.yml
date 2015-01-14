@@ -2,8 +2,8 @@ language: node_js
 node_js:
    - "0.8"
 before_install:
-   - sudo npm install -g grunt-cli
-   - sudo npm install
-   - sudo bower install
+   - npm install -g grunt-cli
+   - npm install -f
+   - bower install -f
 before_script:
    - grunt
