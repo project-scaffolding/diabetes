@@ -1,5 +1,3 @@
-/*global describe, beforeEach, it, expect */
-/*jshint expr: true */
 // (function () {
 //     "use strict";
 

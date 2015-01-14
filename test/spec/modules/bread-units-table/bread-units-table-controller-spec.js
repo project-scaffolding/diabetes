@@ -1,4 +1,4 @@
-/* global define, describe, it */
+/* global define, describe, beforeEach, it, inject, expect */
 define(['modules/bread-units-table/bread-units-table-controller'], function () {
     'use strict';
 
