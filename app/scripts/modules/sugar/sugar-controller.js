@@ -9,7 +9,6 @@ define(['modules/sugar/sugar-module'], function(sugar) {
         var vm = this;
         vm.title = 'Sugar';
         vm.chartData = [];
-        vm.toolTipContentFunction = toolTipContentFunction;
 
         initialize();
 
@@ -29,14 +28,6 @@ define(['modules/sugar/sugar-module'], function(sugar) {
                     [22, 6.0]
                 ]
             }];
-        }
-
-        function toolTipContentFunction() {
-            return function(key, x, y, e, graph) {
-                return 'Super New Tooltip' +
-                    '<h1>' + key + '</h1>' +
-                    '<p>' + y + ' at ' + x + '</p>'
-            }
         }
     }
 });
