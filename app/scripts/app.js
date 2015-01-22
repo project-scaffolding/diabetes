@@ -4,10 +4,13 @@ define([
     'ngResource',
     'ngMock',
 
-    'dao/index',
-    'domain/index',
-    'modules/dashboard/index',
-    'modules/bread-units-table/index'
+    'nvd3ChartDirectives',
+
+    'dao/dao-bootstrap',
+    'domain/domain-bootstrap',
+    'modules/dashboard/dashboard-bootstrap',
+    'modules/bread-units-table/bread-units-table-bootstrap',
+    'modules/sugar/sugar-bootstrap'
 ], function(angular) {
     'use strict';
 
@@ -17,10 +20,14 @@ define([
         'ngResource',
         'ngMockE2E',
 
+        // 3-rd Part modules
+        'nvd3ChartDirectives',
+
         // Application Modules
         'dao',
         'domain',
         'dashboard',
-        'breadUnitsTable'
+        'breadUnitsTable',
+        'sugar'
     ]);
 });

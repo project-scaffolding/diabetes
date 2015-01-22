@@ -20,6 +20,11 @@
     "jquery": true,
     "maxcomplexity": 10,
     "globals": {
-        "define": false
+        "define": false,
+        "describe": false,
+        "beforeEach": false,
+        "inject": false,
+        "it": false,
+        "expect": false
     }
 }

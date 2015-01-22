@@ -1,5 +1,5 @@
 define(['angular'], function(angular) {
     'use strict';
 
-    return angular.module('breadUnitsTable', ['ngRoute']);
+    return angular.module('sugar', ['ngRoute']);
 });

@@ -23,12 +23,17 @@
 </div> -->
 
 <div class="container">
-    <h3>{{vm.title}}</h3>
-    <a href="#/dashboard">Home</a> | 
-    <a href="#/bread-units-table">Bread Units Table</a>
-    <hr/>
+    <div class="row">
+        <h3>{{vm.title}}</h3>
+        <ul class="nav nav-tabs">
+            <li role="presentation"><a href="#/dashboard">Home</a></li>
+            <li role="presentation" class="active"><a href="#/bread-units-table">BU Table</a></li>
+            <li role="presentation"><a href="#/sugar">Sugar</a></li>
+        </ul>
+    </div>
     
     <div class="row">
+        <br/>
         <input ng-model="vm.search" type="search" class="form-control" placeholder="Search">
     </div>
     <div class="row">
