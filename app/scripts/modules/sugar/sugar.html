@@ -10,13 +10,17 @@
     <div class="row">
         <nvd3-line-chart
             data="vm.chartData"
-            id="chartId"
+            id="sugar-points"
             xAxisTickFormat="xAxisTickFormatFunction()"
             yAxisTickFormat="yAxisTickFormatFunction()"
             width="730"
             height="465"
+            forcey="[0, 10]"
             showXAxis="true"
-            showYAxis="true">
+            showYAxis="true"
+            isArea="true"
+            interpolate="monotone"
+            noData="No Data">
                 <svg></svg>
         </nvd3-line-chart>
     </div>
