@@ -19,11 +19,12 @@ require.config({
         ngRoute: ['angular'],
         ngResource: ['angular'],
         ngMock: ['angular'],
-        nvd3ChartDirectives: {
-            deps: ['d3', 'nvd3'],
-            exports: 'nvd3ChartDirectives'
-        }
+        d3: {
+            exports: 'd3'
+        },
+        nvd3: ['d3'],
+        nvd3ChartDirectives: ['d3', 'nvd3']
     },
-    priority: ['angular'],
+    priority: ['angular', 'd3'],
     deps: ['./bootstrap']
 });
