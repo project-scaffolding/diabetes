@@ -3,9 +3,9 @@ define(['domain/domain-module'], function(domain) {
 
     domain.service('breadUnitsService', breadUnitsService);
 
-    breadUnitsService.$injecy = ['$q', 'breadUnitsDao'];
+    breadUnitsService.$injecy = ['breadUnitsDao'];
 
-    function breadUnitsService($q, breadUnitsDao) {
+    function breadUnitsService(breadUnitsDao) {
         var service = {
             getData: getData
         };
@@ -13,12 +13,6 @@ define(['domain/domain-module'], function(domain) {
         return service;
 
         function getData() {
-            // var defer = $q.defer();
-
-            // setTimeout(function() {
-            //     breadUnitsDao.query().$promise.then(defer.resolve);
-            // }, 5000);
-            // return defer.promise;
             return breadUnitsDao.query().$promise;
         }
     }

@@ -3,31 +3,39 @@ define(['modules/sugar/sugar-module'], function(sugar) {
 
     sugar.controller('Sugar', Sugar);
 
-    sugar.$inject = [];
+    sugar.$inject = ['sugarService'];
 
-    function Sugar() {
+    function Sugar(sugarService) {
         var vm = this;
         vm.title = 'Sugar';
         vm.chartData = [];
+        vm.xAxisTickFormatFunction = xAxisTickFormatFunction;
 
         initialize();
 
         function initialize() {
-            vm.chartData = getData();
+            sugarService
+                .fetch()
+                .then(fetchSuccess)
+                .catch(fetchFailed);
         }
 
-        function getData() {
-            return [{
+        function fetchSuccess(data) {
+            vm.chartData = [{
                 key: 'Your Sugar',
-                values: [
-                    [3, 8.0],
-                    [9, 5.5],
-                    [12, 2.7],
-                    [15, 6.1],
-                    [19, 5.8],
-                    [22, 6.0]
-                ]
+                values: data
             }];
+        }
+
+        function fetchFailed() {
+            console.log('fetch is failed');
+        }
+
+        function xAxisTickFormatFunction() {
+            return function(d) {
+                var date = new Date(d);
+                return date.toLocaleString();
+            };
         }
     }
 });

@@ -4,7 +4,7 @@ define(['modules/bread-units-table/bread-units-table-controller'], function () {
     describe('BreadUnitsTable Controller', function () {
 
         beforeEach(function () {
-            module('diabetes');
+            module('breadUnitsTable');
         });
 
         beforeEach(function () {
