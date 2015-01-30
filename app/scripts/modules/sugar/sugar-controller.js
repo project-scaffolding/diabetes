@@ -17,7 +17,7 @@ define(['modules/sugar/sugar-module'], function(sugar) {
             sugarService
                 .fetch()
                 .then(fetchSuccess)
-                .catch(fetchFailed);
+                .catch(function() {});
         }
 
         function fetchSuccess(data) {
@@ -27,9 +27,7 @@ define(['modules/sugar/sugar-module'], function(sugar) {
             }];
         }
 
-        function fetchFailed() {
-            console.log('fetch is failed');
-        }
+        
 
         function xAxisTickFormatFunction() {
             return function(d) {

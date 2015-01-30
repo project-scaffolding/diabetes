@@ -8,9 +8,10 @@ define(['modules/bread-units-table/bread-units-table-controller'], function () {
         });
 
         beforeEach(function () {
-            inject(function($controller, breadUnitsService, $httpBackend) {
+            inject(function($controller, $httpBackend, $rootScope) {
                 this.$controller = $controller('BreadUnitsTable', {});
                 this.$httpBackend = $httpBackend;
+                $rootScope.$apply();
             });
         });
 

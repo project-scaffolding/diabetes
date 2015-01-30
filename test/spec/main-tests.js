@@ -32,12 +32,15 @@ require.config({
     baseUrl: '../app/scripts',
     paths: {
         chai: '../../app/bower_components/chai/chai',
-        sinon: '../../app/bower_components/sinon/lib/sinon'
+        sinon: '../../app/bower_components/sinonjs/sinon',
+        bind: '../../app/scripts/common/config/function/bind'
     }
 });
 
 require([
     'chai',
+    'sinon',
+    'bind',
     'angular'
 ], function (chai) {
     chai.should();

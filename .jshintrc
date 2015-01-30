@@ -21,6 +21,7 @@
     "maxcomplexity": 10,
     "globals": {
         "define": false,
+        "sinon": false,
         "describe": false,
         "beforeEach": false,
         "inject": false,

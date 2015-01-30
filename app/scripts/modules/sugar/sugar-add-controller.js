@@ -31,16 +31,8 @@ define(['modules/sugar/sugar-module'], function(sugar) {
 
             sugarService
                 .save(data)
-                .then(saveSuccess)
-                .catch(saveFailed);
-        }
-
-        function saveSuccess(collection) {
-            console.log('Data is saved', collection);
-        }
-
-        function saveFailed() {
-            console.log('Data is not saved');
+                .then(function() {})
+                .catch(function() {});
         }
     }
 });

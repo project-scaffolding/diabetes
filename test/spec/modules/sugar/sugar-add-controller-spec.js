@@ -19,5 +19,24 @@ define(['modules/sugar/sugar-controller'], function () {
                 expect(this.$controller.title).to.equal('Add Data');
             });
         });
+
+        describe('date', function () {
+            it('should be date object', function() {
+                expect(this.$controller.date).to.be.a('date');
+            });
+        });
+
+        describe('sugar', function () {
+            it('should be defined', function() {
+                expect(this.$controller.sugar).to.be.a('number');
+                expect(this.$controller.sugar).to.equal(5);
+            });
+        });
+
+        describe('save', function () {
+            
+        });
+
+
     });
 });
