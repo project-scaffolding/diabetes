@@ -27,8 +27,6 @@ define(['modules/sugar/sugar-module'], function(sugar) {
             }];
         }
 
-        
-
         function xAxisTickFormatFunction() {
             return function(d) {
                 var date = new Date(d);

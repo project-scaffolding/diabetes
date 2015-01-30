@@ -35,7 +35,7 @@ define(['modules/sugar/sugar-controller'], function () {
                 expect(this.$controller.chartData[0].values[2][1]).to.equal(5.3);
                 expect(this.$controller.chartData[0].values[3][1]).to.equal(9.2);
                 expect(this.$controller.chartData[0].values[4][1]).to.equal(7);
-            });  
+            });
         });
 
 
