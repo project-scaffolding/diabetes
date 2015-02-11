@@ -5,6 +5,14 @@ define(['domain/domain-module'], function(domain) {
 
     sugarService.$injecy = ['$q'];
 
+    /**
+     * @ngdoc service
+     * @name diabetes.domain.service:sugarService
+     * @function
+     *
+     * @description
+     * Application for diabetics to see sugar points on chhart and table.
+     */
     function sugarService($q) {
         var storage = [];
         var service = {
@@ -14,6 +22,12 @@ define(['domain/domain-module'], function(domain) {
 
         return service;
 
+        /**
+         * @ngdoc function
+         * @name fetch
+         * @module domain
+         * @kind function
+         */
         function fetch() {
             var defer = $q.defer();
             var dataPoints = storage.map(function(model) {
