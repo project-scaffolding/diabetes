@@ -117,7 +117,8 @@ module.exports = function (grunt) {
                     ]
                 }]
             },
-            server: '.tmp'
+            server: '.tmp',
+            docs: 'docs'
         },
 
         // Make sure code styles are up to par and there are no obvious mistakes
@@ -412,6 +413,19 @@ module.exports = function (grunt) {
                 'imagemin',
                 'svgmin'
             ]
+        },
+        ngdocs: {
+            options: {
+                scripts: [
+                    'angular.js'
+                ],
+                html5Mode: false,
+                startPage: '/app',
+            },
+            app: {
+                src: ['<%= yeoman.app %>/scripts/**/*.js'],
+                title: 'Diabetes Application'
+            }
         }
     });
 
@@ -422,6 +436,8 @@ module.exports = function (grunt) {
         }
 
         grunt.task.run([
+            'clean:docs',
+            'ngdocs:app',
             'clean:server',
             'concurrent:server',
             'autoprefixer',

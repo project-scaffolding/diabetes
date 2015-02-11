@@ -1,4 +1,3 @@
-/* global define, describe, beforeEach, it, inject, expect */
 define(['modules/dashboard/dashboard-controller'], function () {
     'use strict';
 

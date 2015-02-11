@@ -1,17 +1,17 @@
-/* global define, describe, beforeEach, it, inject, expect */
 define(['modules/bread-units-table/bread-units-table-controller'], function () {
     'use strict';
 
     describe('BreadUnitsTable Controller', function () {
 
         beforeEach(function () {
-            module('diabetes');
+            module('breadUnitsTable');
         });
 
         beforeEach(function () {
-            inject(function($controller, breadUnitsService, $httpBackend) {
+            inject(function($controller, $httpBackend, $rootScope) {
                 this.$controller = $controller('BreadUnitsTable', {});
                 this.$httpBackend = $httpBackend;
+                $rootScope.$apply();
             });
         });
 

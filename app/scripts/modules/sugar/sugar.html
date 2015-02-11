@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="row">
+        <h3>{{vm.title}}</h3>
+        <ul class="nav nav-tabs">
+            <li role="presentation"><a href="#/dashboard">Home</a></li>
+            <li role="presentation"><a href="#/bread-units-table">BU Table</a></li>
+            <li role="presentation" class="active"><a href="#/sugar">Sugar</a></li>
+        </ul>
+    </div>
+    <div class="row">
+        <nvd3-line-chart
+            data="vm.chartData"
+            id="sugar-points"
+            xAxisTickFormat="vm.xAxisTickFormatFunction()"
+            yAxisTickFormat="vm.yAxisTickFormatFunction()"
+            width="730"
+            height="465"
+            forcey="[0, 10]"
+            showXAxis="true"
+            showYAxis="true"
+            isArea="true"
+            interpolate="monotone"
+            noData="No Data">
+                <svg></svg>
+        </nvd3-line-chart>
+    </div>
+    <div class="row">
+        <!-- <ul class="list-group">
+            <li class="list-group-item">Show All Data</li>
+            <li class="list-group-item">Add Data Point</li>
+        </ul> -->
+        <div class="list-group">
+            <a class="list-group-item">Show All Data</a>
+            <a href="#/sugar/add"class="list-group-item">Add Data Point</a>
+        </div>
+    </div>
+</div>
